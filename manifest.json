@@ -1,0 +1,64 @@
+{
+  "name": "cart-details",
+  "vendor": "dacris",
+  "version": "0.0.0",
+  "title": "Cart details",
+  "description": "App that exposes details about products and promotions on the checkout page",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x"
+  },
+  "builders": {
+    "docs": "0.x",
+    "node": "6.x"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Cart Details",
+    "type": "object",
+    "properties": {
+      "vtexAppKey": {
+        "title": "VTEX App Key",
+        "type": "string",
+        "description": "VTEX App Key"
+      },
+      "vtexAppToken": {
+        "title": "VTEX App Token",
+        "type": "string",
+        "description": "VTEX App Token"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
