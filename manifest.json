@@ -1,7 +1,7 @@
 {
   "name": "cart-details",
   "vendor": "dacris",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "title": "Cart details",
   "description": "App that exposes details about products and promotions on the checkout page",
   "mustUpdateAt": "2018-01-04",
